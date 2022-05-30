@@ -70,23 +70,32 @@ input:checked[type="checkbox"]::before{
     top: 340px;
     left: 545px;
     width: 120px;
-    animation: speed 1s ease 7ms infinite alternate forwards;
+    animation: wheels .3s ease 7ms infinite;
 }
 .wheel2 {
     position: absolute;
     top: 340px;
     left: 1024px;
     width: 120px;
-    animation: speed 1s ease 7ms infinite alternate forwards;
+    animation: wheels .3s ease 7ms infinite;
 }
-@keyframes speed {
-	0% {
-		transform: rotateZ(-360deg);
-	}
-	100% {
-		transform: rotateZ(0);
-	}
-}
+@keyframes wheels {
+    0% {
+      transform: rotateZ(0deg);
+    }
+      25%{
+      transform: rotateZ(-90deg);
+      }
+      50%{
+      transform: rotateZ(-120deg);
+      }
+      75%{
+      transform: rotateZ(-240deg);
+      }
+    100% {
+      transform: rotateZ(-360deg);
+    }
+  }
 .black {
     width: 35px;
     height: 35px;
